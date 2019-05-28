@@ -28,8 +28,8 @@
 init(int opmode, Key key, AlgorithmParameterSpec params)  
 (1)opmode ：Cipher.ENCRYPT_MODE(加密模式)和 Cipher.DECRYPT_MODE(解密模式)  
 (2)key ：密匙，使用传入的盐构造出一个密匙，可以使用SecretKeySpec、KeyGenerator和KeyPairGenerator创建密匙，其中  
- * SecretKeySpec和KeyGenerator支持AES，DES，DESede三种加密算法创建密匙  
- * KeyPairGenerator支持RSA加密算法创建密匙  
+   * SecretKeySpec和KeyGenerator支持AES，DES，DESede三种加密算法创建密匙  
+   * KeyPairGenerator支持RSA加密算法创建密匙  
 (3)params ：使用CBC模式时必须传入该参数，该项目使用IvParameterSpec创建iv 对象  
 
 ### 1.3 加密或解密  
@@ -40,11 +40,11 @@ byte[] b = cipher.doFinal(content);
 ### 2.1、针对1.3返回结果返回字符串乱码的问题，一般对byte数组进行处理，有两种处理方式：转换为base64的字符串或转换为16进制的字符串
 ### 2.2、转换为base64
   使用apache下的Base64类进行封装即可，Base64.encodeBase64String(result); 结果形如 qPba5V+b0Ox3Um...  
-    <dependency>  
-        <groupId>commons-codec</groupId>  
-        <artifactId>commons-codec</artifactId>  
-        <version>???</version>  
-    </dependency>  
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>???</version>
+        </dependency>
 ### 2.3、转换为16进制
   编码实现，即编码实现将2进制转换为16进制，可参看代码中的HexUtil.java文件，结果形如 04A2784A45234B.....  
 
