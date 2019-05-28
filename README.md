@@ -1,5 +1,5 @@
 ﻿# Java_Cipher_Encrypt
-Java原生加密，使用Cipher类进行加密
+====Java原生加密，使用Cipher类进行加密
 
 一、Java的Cipher类
     1.1 Cipher类提供了加密和解密的功能。该项目使用Cipher类完成aes，des，des3和rsa加密。
