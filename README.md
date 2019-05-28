@@ -3,11 +3,11 @@ Java原生加密，使用Cipher类进行加密
 ====
 一、Java的Cipher类
 ----
-#1.1 Cipher类提供了加密和解密的功能。该项目使用Cipher类完成aes，des，des3和rsa加密。
-获取Cipher类的对象：Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding"); 参数按"算法/模式/填充模式"，有以下的参数
-*·AES/CBC/NoPadding (128)
-*·AES/CBC/PKCS5Padding (128)
-*·AES/ECB/NoPadding (128)
+#1.1 Cipher类提供了加密和解密的功能。该项目使用Cipher类完成aes，des，des3和rsa加密.  
+获取Cipher类的对象：Cipher cipher = Cipher.getInstance("DES/CBC/PKCS5Padding"); 参数按"算法/模式/填充模式"，有以下的参数  
+*·AES/CBC/NoPadding (128)  
+*·AES/CBC/PKCS5Padding (128)  
+*·AES/ECB/NoPadding (128)  
       ·AES/ECB/PKCS5Padding (128)
       ·DES/CBC/NoPadding (56)
       ·DES/CBC/PKCS5Padding (56)
